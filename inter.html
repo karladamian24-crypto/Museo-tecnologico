@@ -6,7 +6,7 @@
     <title>MUSEO DEL FUTURO "TECNOLOGÍA E INNOVACIÓN"</title>
     <!-- Enlace a tu archivo CSS -->
     <link rel="stylesheet" href="ESTILOSMUSEO.css">
-</head> 
+</head>
 <body>
 
 <header class="encabezado">
@@ -28,7 +28,7 @@
     <a href="#creditos">Créditos</a>
 </nav>
 
-
+<!-- SECCIÓN INICIO -->
 <section id="inicio" class="inicio">
     <div class="contenido">
         <p>
@@ -69,7 +69,7 @@
     <a href="#inicio" class="boton-volver">↑ Volver al inicio</a>
 </section>
 
-
+<!-- SECCIÓN EXPOSICIONES -->
 <section id="exposiciones" class="exposiciones">
     <h2>Nuestras exposiciones serán las siguientes:</h2>
     <p>
@@ -107,14 +107,13 @@
     <a href="#inicio" class="boton-volver">↑ Volver al inicio</a>
 </section>
 
-
+<!-- SECCIÓN GALERÍAS (CON DESPLEGABLES) -->
 <section id="galerias" class="galerias">
     <h2>Galerías por exposición</h2>
     <p>
         Haz clic en cada título para desplegar las imágenes y características de cada sala.
     </p>
 
-  
     <details class="galeria-desplegable" id="galeria-electronica">
         <summary>MUNDO DE LA ELECTRÓNICA</summary>
         <p>En esta galería podrás observar algunos circuitos, componentes y herramientas electrónicas.</p>
@@ -152,6 +151,7 @@
             </figure>
         </div>
     </details>
+
     <details class="galeria-desplegable" id="galeria-videojuegos">
         <summary>HISTORIA DE LOS VIDEOJUEGOS</summary>
         <p>Un recorrido por las consolas y experiencias de entretenimiento digital.</p>
@@ -174,6 +174,7 @@
     <a href="#inicio" class="boton-volver">↑ Volver al inicio</a>
 </section>
 
+<!-- SECCIÓN COLECCIONES -->
 <section id="colecciones" class="colecciones">
     <h2>Colecciones del museo</h2>
     <p>
@@ -202,7 +203,7 @@
     <a href="#inicio" class="boton-volver">↑ Volver al inicio</a>
 </section>
 
-
+<!-- SECCIÓN ACTIVIDADES -->
 <section id="actividades" class="actividades">
     <h2>Actividades</h2>
     <p>
@@ -245,7 +246,7 @@
     <a href="#inicio" class="boton-volver">↑ Volver al inicio</a>
 </section>
 
-
+<!-- SECCIÓN HORARIO -->
 <section id="horario" class="horario">
     <h2>Nuestros horarios de visita serán los siguientes:</h2>
     <p>
@@ -275,7 +276,7 @@
     <a href="#inicio" class="boton-volver">↑ Volver al inicio</a>
 </section>
 
-<!-- SECCIÓN UBICACIÓN (CON RETORNO A PÁGINA PRINCIPAL) -->
+<!-- SECCIÓN UBICACIÓN -->
 <section id="ubicacion" class="ubicacion">
     <h2>Ubicación y cómo llegar a nuestro museo</h2>
     <p>
@@ -323,7 +324,6 @@
         </a>
     </div>
     
-    <!-- Botón de regreso a la página principal -->
     <a href="#inicio" class="boton-volver">↑ Volver a la página principal</a>
 </section>
 
@@ -382,7 +382,7 @@
     </div>
     
     <h3>Formulario de contacto</h3>
-    <form action="#" method="get">
+    <form id="formularioContacto" action="#" method="get" novalidate>
         <label for="nombre">Nombre completo:</label>
         <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre" required>
  
@@ -401,6 +401,8 @@
         <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje" required></textarea>
 
         <button type="submit">Enviar mensaje</button>
+
+        <div id="mensajeRespuesta" class="mensaje-respuesta"></div>
     </form>
 
     <p class="aviso">Este formulario es demostrativo. No envía información a un servidor.</p>
@@ -423,7 +425,7 @@
 
     <h3>Elaboración del proyecto</h3>
     <p>Diseño y estructura: Museo del Futuro.</p>
-    <p>Desarrollo: HTML5 y CSS3.</p>
+    <p>Desarrollo: HTML5, CSS3 y JavaScript.</p>
     <p>Proyecto escolar de Programación Web I.</p>
     <p>Las imágenes pertenecen a sus respectivos autores y se utilizan como recursos ilustrativos.</p>
     <a href="#inicio" class="boton-volver">↑ Volver al inicio</a>
@@ -436,6 +438,11 @@
     <p> 2026 Museo del Futuro. Todos los derechos reservados.</p>
     <a href="#inicio">Volver al inicio ↑</a>
 </footer>
+
+<!-- ========================================
+     ENLACE AL ARCHIVO JAVASCRIPT EXTERNO
+     ======================================== -->
+<script src="ScriptMuseo_Tecnologia.js"></script>
 
 </body>
 </html>

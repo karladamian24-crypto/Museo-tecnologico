@@ -1,4 +1,3 @@
-
 /* ========================================================
    IMPORTACIÓN DE FUENTES (Google Fonts)
    ======================================================== */
@@ -14,15 +13,14 @@
 }
 
 body, html {
-    background-color: #1a1a2e !important; /* Fondo general oscuro */
+    background-color: #1a1a2e !important;
     background-image: none !important;
     color: #e0e0e0 !important;
-    font-family: 'Open Sans', sans-serif; /* Letra para párrafos */
+    font-family: 'Open Sans', sans-serif;
     line-height: 1.7;
     min-height: 100vh;
 }
 
-/* Títulos con tipografía llamativa */
 h1, h2, h3 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
@@ -33,10 +31,9 @@ p, li, span, div, strong, label, figcaption, td {
 }
 
 /* ========================================================
-   CABECERA CON IMAGEN Y EFECTO OSCURO
+   CABECERA
    ======================================================== */
 .encabezado {
-    /* Imagen de museo con degradado oscuro para que el texto resalte */
     background-image: linear-gradient(rgba(26, 26, 46, 0.7), rgba(26, 26, 46, 0.8)), url('https://images.unsplash.com/photo-1518998053901-5348d3961a04?q=80&w=1920&auto=format&fit=crop') !important;
     background-size: cover !important;
     background-position: center !important;
@@ -57,14 +54,14 @@ p, li, span, div, strong, label, figcaption, td {
 }
 
 .encabezado p {
-    color: #f39c12 !important; /* Naranja llamativo */
+    color: #f39c12 !important;
     font-size: 1.6rem !important;
     font-weight: 700;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9) !important;
 }
 
 /* ========================================================
-   MENÚ DE NAVEGACIÓN DINÁMICO
+   MENÚ
    ======================================================== */
 .menu {
     background-color: #0f3460 !important;
@@ -95,7 +92,7 @@ p, li, span, div, strong, label, figcaption, td {
 }
 
 /* ========================================================
-   SECCIONES EN RECTÁNGULOS (CONTENEDORES)
+   SECCIONES
    ======================================================== */
 section {
     background-color: #16213e !important; 
@@ -109,11 +106,10 @@ section {
 }
 
 section:hover {
-    transform: translateY(-5px); /* Efecto de que "flota" al pasar el mouse */
-    box-shadow: 0 12px 35px rgba(233, 69, 96, 0.2) !important; /* Sombra rojiza */
+    transform: translateY(-5px);
+    box-shadow: 0 12px 35px rgba(233, 69, 96, 0.2) !important;
 }
 
-/* Títulos dentro de las secciones */
 section h2 {
     color: #f39c12 !important; 
     font-size: 2.2rem;
@@ -131,7 +127,7 @@ section h3, h3 {
 }
 
 /* ========================================================
-   BOTONES DINÁMICOS
+   BOTONES
    ======================================================== */
 .boton, .boton-volver {
     display: inline-block;
@@ -187,7 +183,7 @@ section h3, h3 {
 
 .tarjeta:hover, .galeria figure:hover {
     transform: translateY(-8px) scale(1.02);
-    box-shadow: 0 10px 25px rgba(78, 204, 163, 0.3); /* Brillo verde */
+    box-shadow: 0 10px 25px rgba(78, 204, 163, 0.3);
 }
 
 .tarjeta img, .galeria img {
@@ -221,7 +217,7 @@ section h3, h3 {
 }
 
 /* ========================================================
-   GALERÍAS DESPLEGABLES (ACORDEÓN)
+   GALERÍAS DESPLEGABLES
    ======================================================== */
 .galeria-desplegable {
     background-color: #0f3460 !important;
@@ -357,7 +353,46 @@ form button:hover {
 }
 
 /* ========================================================
-   PIE DE PÁGINA (FOOTER)
+   MENSAJES DE RESPUESTA DEL FORMULARIO (JS)
+   ======================================================== */
+.mensaje-respuesta {
+    margin-top: 20px;
+    padding: 15px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    display: none;
+    animation: aparecer 0.4s ease;
+}
+
+.mensaje-respuesta.exito {
+    display: block;
+    background-color: rgba(78, 204, 163, 0.15);
+    border-left: 5px solid #4ecca3;
+    color: #4ecca3 !important;
+}
+
+.mensaje-respuesta.error {
+    display: block;
+    background-color: rgba(233, 69, 96, 0.15);
+    border-left: 5px solid #e94560;
+    color: #e94560 !important;
+}
+
+form input.invalido,
+form textarea.invalido,
+form select.invalido {
+    border-color: #e94560 !important;
+    box-shadow: 0 0 10px rgba(233, 69, 96, 0.5) !important;
+}
+
+@keyframes aparecer {
+    from { opacity: 0; transform: translateY(-10px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ========================================================
+   FOOTER
    ======================================================== */
 footer {
     background-color: #0f3460 !important;
@@ -394,7 +429,7 @@ footer a:hover {
 }
 
 /* ========================================================
-   AVISOS Y TEXTOS ESPECIALES
+   AVISOS
    ======================================================== */
 .aviso {
     background-color: rgba(243, 156, 18, 0.1);
@@ -406,7 +441,7 @@ footer a:hover {
 }
 
 /* ========================================================
-   RESPONSIVE (Para móviles y pantallas pequeñas)
+   RESPONSIVE
    ======================================================== */
 @media (max-width: 768px) {
     .encabezado h1 { font-size: 2.5rem !important; letter-spacing: 2px !important; }
@@ -416,3 +451,4 @@ footer a:hover {
     .menu { flex-direction: column; align-items: center; }
     .menu a { width: 100%; text-align: center; }
 }
+
